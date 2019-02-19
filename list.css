@@ -1,0 +1,64 @@
+header{
+    position: relative;
+}
+
+#title{
+    text-align: center;
+}
+
+button{
+    border: 1px solid black;
+    padding: 0.4% 5%;
+    background-color: white;
+
+}
+#buttonAdd{
+    float: right;
+    margin: 0px auto;
+    margin-right: 5%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    
+}
+
+.buttonOptions{
+    width: 48%;
+}
+
+table{
+    width: 100%;
+}
+
+#tableName{
+    position: inline-block;
+    width: 84%;
+}
+
+#tableOption{
+    width: 16%;
+    position: inline-block;
+}
+
+td, th{
+    border: 1px solid black;
+    font-size: 16px;
+}
+
+.clearBox{
+    clear: both;
+    float: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .buttonOptions{
+        width: 100%
+    }
+    
+    #buttonAdd{
+        position: relative;
+        float: none;
+        margin-left: 35%;
+        margin-right: 35%;
+    }
+}
