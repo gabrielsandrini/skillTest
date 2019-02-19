@@ -18,13 +18,17 @@
                 tableRow +="    <td>"+employe.name+"</td>";
                 tableRow +="    <td>"; 
                 tableRow +="         <button onclick=\"deleteEmploye("+index+")\" class=\"buttonOptions\">Delete</button>";
-                tableRow +="         <button onclick=\"passIndexThroughUrl("+index+")\" class=\"buttonOptions\">Edit</button>" ;
+                tableRow +="         <button onclick=\"redirectToEditForm("+index+")\" class=\"buttonOptions\">Edit</button>" ;
                 tableRow +="    </td>";
                 tableRow +=" </tr>";
                 
                 $("#employeesTable").append(tableRow);
             });
        });
+        
+        function redirectToEditForm(index){
+            location.href = "register.html?index="+index;    
+        }
         
     </script>
     

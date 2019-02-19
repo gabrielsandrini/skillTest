@@ -30,14 +30,30 @@ function getNewEmployeObject(){
 function saveNewEmploye(employeObject){
     let array = getEmployeesArray();
     array.push(employeObject);
-    
+    saveArrayInLocalStorage(array);
+}
+
+function saveArrayInLocalStorage(array)
+{
     let employeJson = JSON.stringify(array);
     localStorage.setItem('employees', employeJson);
 }
 
 function deleteEmploye(index){
-    
+    let confirm = window.confirm("Are you sure you want to delete this item?");
+    if(confirm){
+        let array = getEmployeesArray();
+        array.splice(index,1);
+        saveArrayInLocalStorage(array);
+        location.reload();
+    }
 }
+
+function redirectToEditForm(index){
+    location.href = "register.html?index="+index;    
+}
+
+
 
 //Setters
 function setName(employe, name){
