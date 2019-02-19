@@ -1,0 +1,68 @@
+#title{
+	text-align: center;
+}
+
+fieldset{
+	border: 1px solid #4d4d4d;
+}
+
+hr{
+	color: #bfbfbf;
+}
+
+input, textarea {
+	margin: 0.5%;
+	margin-top: 1%;
+	border-radius: 5px;
+	position: relative;
+    font-size: 16px;
+}
+
+.form-margin{
+    padding-left: 1%;
+    padding-right: 1%;
+    margin: 0px auto;
+}
+
+
+#addressNumber{
+    width: 5%;    
+}
+
+#phoneNumber{
+    width: 31.6%;
+}
+
+
+.form-buttons{
+	float: right;
+	background-color: white;
+	margin: 0.5%;
+	padding: 0.4% 5%;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width: 1100px) {
+    #addressNumber{
+        width: 10%;
+    }
+} 
+
+@media only screen and (max-width: 700px) {
+    #addressNumber{
+        width: 20%;
+    }
+} 
+
+@media only screen and (max-width: 400px){
+    #phoneNumber{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #addressNumber{
+        width: 30%;
+    }
+   
+} 
