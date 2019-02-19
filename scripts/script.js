@@ -9,8 +9,8 @@ function getEmployeesArray()
     return array;
 }
 
-function getNewEmployeeObject(){
-    let employee = {
+function getNewEmployeObject(){
+    let employe = {
         name : null,
         age : null,
         birthDay : null,
@@ -24,104 +24,104 @@ function getNewEmployeeObject(){
         notes : null
     };
     
-    return employee;
+    return employe;
 }
 
-function saveNewEmployee(employeeObject){
+function saveNewEmploye(employeObject){
     let array = getEmployeesArray();
-    array.push(employeeObject);
+    array.push(employeObject);
     
-    let employeeJson = JSON.stringify(array);
-    localStorage.setItem('employees', employeeJson);
+    let employeJson = JSON.stringify(array);
+    localStorage.setItem('employees', employeJson);
 }
 
 //Setters
-function setName(employee, name){
-    employee.name = name;
+function setName(employe, name){
+    employe.name = name;
 }
 
-function setAge(employee,age){
-    employee.age = age;
+function setAge(employe,age){
+    employe.age = age;
 }
 
-function setBirthDay(employee, birthDay){
-    employee.birthDay = birthDay;
+function setBirthDay(employe, birthDay){
+    employe.birthDay = birthDay;
 }
 
-function setPhoneNumber(employee,phoneNumber){
-    employee.phoneNumber = phoneNumber;
+function setPhoneNumber(employe,phoneNumber){
+    employe.phoneNumber = phoneNumber;
 }
 
-function setRg(employee, rg){
-    employee.rg = rg;
+function setRg(employe, rg){
+    employe.rg = rg;
 }
 
-function setCpf(employee, cpf){
-    employee.cpf = cpf;
+function setCpf(employe, cpf){
+    employe.cpf = cpf;
 }
 
-function setAddress(employee, address){
-    employee.address = address;
+function setAddress(employe, address){
+    employe.address = address;
 }
 
-function setAddressNumber(employee, number){
-    employee.number = number;
+function setAddressNumber(employe, number){
+    employe.number = number;
 }
 
-function setCity(employee, city){
-    employee.city = city;
+function setCity(employe, city){
+    employe.city = city;
 }
 
-function setState(employee, state){
-    employee.state = state;
+function setState(employe, state){
+    employe.state = state;
 }
 
-function setNotes(employee, notes){
-    employee.notes = notes;
+function setNotes(employe, notes){
+    employe.notes = notes;
 }
 
 //Getters
 
-function getName(employee){
-   return employee.name;
+function getName(employe){
+   return employe.name;
 }
 
-function getAge(employee){
-    return employee.age;
+function getAge(employe){
+    return employe.age;
 }
 
-function getBirthDay(employee){
-    return employee.birthDay;
+function getBirthDay(employe){
+    return employe.birthDay;
 }
 
-function getPhoneNumber(employee){
-    return employee.phoneNumber;
+function getPhoneNumber(employe){
+    return employe.phoneNumber;
 }
 
-function getRg(employee){
-    return employee.rg;
+function getRg(employe){
+    return employe.rg;
 }
 
-function getCpf(employee){
-    return employee.cpf;
+function getCpf(employe){
+    return employe.cpf;
 }
 
-function getAddress(employee){
-    return employee.address;
+function getAddress(employe){
+    return employe.address;
 }
 
-function getAddressNumber(employee){
-    return employee.number;
+function getAddressNumber(employe){
+    return employe.number;
 }
 
-function getCity(employee){
-    return employee.city;
+function getCity(employe){
+    return employe.city;
 }
 
-function getState(employee){
-    return employeeArray.state;
+function getState(employe){
+    return employe.state;
 }
 
-function getNotes(employee){
-    return employee.notes;
+function getNotes(employe){
+    return employe.notes;
 }

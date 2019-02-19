@@ -8,10 +8,10 @@
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        var employee = getNewEmployeeObject();
+        var employe = getNewEmployeObject();
         
         function save(){
-            saveNewEmployee(employee);
+            saveNewEmploye(employe);
             window.location.replace("index.html");
         }
         
@@ -30,31 +30,31 @@
 				<h2>Create/Edit</h2>
 				<hr>
 				<div class = "form-margin">
-				<input type="text" id="name" name="name" placeholder="Name" style="width: 98.4%" onchange="setName(employee, this.value)">
+				<input type="text" id="name" name="name" placeholder="Name" style="width: 98.4%" onchange="setName(employe, this.value)">
 				<br>
 
-                <input type="number" id="age" name="age" placeholder="Age" style="width: 31.6%" onchange="setAge(employee, this.value)">
+                <input type="number" id="age" name="age" placeholder="Age" style="width: 31.6%" onchange="setAge(employe, this.value)">
 				<input type="text" id="birthDay" name="birthDay" placeholder="Birth Day" 
-                       style="width: 31.6%" onchange="setBirthDay(employee, this.value)">
+                       style="width: 31.6%" onchange="setBirthDay(employe, this.value)">
 				<input type="text" id="phoneNumber" name="phoneNumber"  placeholder="Phone Number" class="whithout-margin-right"
-                       onchange="setPhoneNumber(employee, this.value)">
+                       onchange="setPhoneNumber(employe, this.value)">
 
 				<br>
-                <input type="text" id="rg" name="rg" placeholder="RG" style="width: 31.6%" onchange="setRg(employee, this.value)">
-                <input type="text" id="cpf" name="CPF" placeholder="CPF" style="width: 31.6%" onchange="setCpf(employee, this.value)">
+                <input type="text" id="rg" name="rg" placeholder="RG" style="width: 31.6%" onchange="setRg(employe, this.value)">
+                <input type="text" id="cpf" name="CPF" placeholder="CPF" style="width: 31.6%" onchange="setCpf(employe, this.value)">
 				<br>
                 <input type="text" id="address" name="address" placeholder="Address" style="width: 91.5%" 
-                        onchange="setAddress(employee, this.value)">
+                        onchange="setAddress(employe, this.value)">
                 <input type="text" id="addressNumber" name="AddressNumber"  placeholder="Number" 
-                        onchange="setAddressNumber(employee, this.value)">
+                        onchange="setAddressNumber(employe, this.value)">
 				<br>
                 <input type="text" id="city" name="city" placeholder="City" style="width: 44.9%" 
-                        onchange="setCity(employee, this.value)">
+                        onchange="setCity(employe, this.value)">
                 <input type="text" id="state" name="state" placeholder="State" style="width: 44.9%" 
-                        onchange="setState(employee, this.value)">
+                        onchange="setState(employe, this.value)">
 				<br>
 				<textarea name="notes" id="notes" placeholder="Notes" 
-                          style="width: 98.4%; min-height: 80px;" onchange="setNotes(employee, this.value)"></textarea>
+                          style="width: 98.4%; min-height: 80px;" onchange="setNotes(employe, this.value)"></textarea>
 				<br> <br>
 				<button class="form-buttons" type="button" onclick="save()">Save</button>
                 <button class="form-buttons" type="reset" onclick="cancel()">Cancel</button>
