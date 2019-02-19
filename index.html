@@ -7,27 +7,43 @@
     <link rel="stylesheet" type="text/css" href="style/list.css">
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    
+    <script type="text/javascript">
+       $(document).ready(function(){
+            var employees =  getEmployeesArray();
+            employees.forEach( function(employe,index){
+
+                let tableRow = "";
+                tableRow +=" <tr>";
+                tableRow +="    <td>"+employe.name+"</td>";
+                tableRow +="    <td>"; 
+                tableRow +="         <button onclick=\"deleteEmploye("+index+")\" class=\"buttonOptions\">Delete</button>";
+                tableRow +="         <button onclick=\"passIndexThroughUrl("+index+")\" class=\"buttonOptions\">Edit</button>" ;
+                tableRow +="    </td>";
+                tableRow +=" </tr>";
+                
+                $("#employeesTable").append(tableRow);
+            });
+       });
+        
+    </script>
+    
 </head>
 <body>
     <header>
         <h1 id="title"> Employees list </h1>
-        <button id="buttonAdd">Add new employe</button>
+        <button id="buttonAdd" type="button" onclick="location.href = 'register.html'">Add new employe</button>
     </header>
     <div class="clearBox"></div>
     <article>
-        <table>
+       
+        <table id="employeesTable">
             <tr>
                 <th id="tableName">Name</th>
                 <th id="tableOption">Option</th>
             </tr>
-            <tr>
-                <td>Test</td>
-                <td> 
-                    <button class="buttonOptions">Delete</button>
-                    <button class="buttonOptions">Edit</button> 
-                </td>
-            </tr>
         </table>
+        
     </article>
 </body>
 </html>

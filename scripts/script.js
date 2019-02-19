@@ -35,6 +35,10 @@ function saveNewEmploye(employeObject){
     localStorage.setItem('employees', employeJson);
 }
 
+function deleteEmploye(index){
+    
+}
+
 //Setters
 function setName(employe, name){
     employe.name = name;
@@ -78,50 +82,4 @@ function setState(employe, state){
 
 function setNotes(employe, notes){
     employe.notes = notes;
-}
-
-//Getters
-
-function getName(employe){
-   return employe.name;
-}
-
-function getAge(employe){
-    return employe.age;
-}
-
-function getBirthDay(employe){
-    return employe.birthDay;
-}
-
-function getPhoneNumber(employe){
-    return employe.phoneNumber;
-}
-
-function getRg(employe){
-    return employe.rg;
-}
-
-function getCpf(employe){
-    return employe.cpf;
-}
-
-function getAddress(employe){
-    return employe.address;
-}
-
-function getAddressNumber(employe){
-    return employe.number;
-}
-
-function getCity(employe){
-    return employe.city;
-}
-
-function getState(employe){
-    return employe.state;
-}
-
-function getNotes(employe){
-    return employe.notes;
 }
