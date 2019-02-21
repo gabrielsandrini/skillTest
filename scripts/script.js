@@ -102,7 +102,7 @@ function getParameterFromActualUrl(parameterName){
 
 //Setters
 function setName(employe, name){
-    employe.name = name;
+    employe.name = name.trim();
 }
 
 function setAge(employe,age){
@@ -110,37 +110,37 @@ function setAge(employe,age){
 }
 
 function setBirthDay(employe, birthDay){
-    employe.birthDay = birthDay;
+    employe.birthDay = birthDay.trim();
 }
 
 function setPhoneNumber(employe,phoneNumber){
-    employe.phoneNumber = phoneNumber;
+    employe.phoneNumber = phoneNumber.trim();
 }
 
 function setRg(employe, rg){
-    employe.rg = rg;
+    employe.rg = rg.trim();
 }
 
 function setCpf(employe, cpf){
-    employe.cpf = cpf;
+    employe.cpf = cpf.trim();
 }
 
 function setAddress(employe, address){
-    employe.address = address;
+    employe.address = address.trim();
 }
 
 function setAddressNumber(employe, number){
-    employe.number = number;
+    employe.number = number.trim();
 }
 
 function setCity(employe, city){
-    employe.city = city;
+    employe.city = city.trim();
 }
 
 function setState(employe, state){
-    employe.state = state;
+    employe.state = state.trim();
 }
 
 function setNotes(employe, notes){
-    employe.notes = notes;
+    employe.notes = notes.trim();
 }
