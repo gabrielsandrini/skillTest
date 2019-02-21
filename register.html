@@ -8,7 +8,34 @@
     <script type="text/javascript" src="scripts/script.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
     <script type="text/javascript">
-        var employe = getNewEmployeObject();
+        var employe; 
+        
+        $(document).ready(function(){
+            
+            let index = getParameterFromActualUrl("index");
+            if(index === ""){
+                //It will register a new employe:
+                employe = getNewEmployeObject();
+            } else{
+                //It will edit a employe:
+                employe = getEmploye(index);
+                
+                $("#saveButton").attr('onclick', 'update('+index+')');
+                $("#name").val(employe.name);
+                $("#age").val(employe.age);
+                $("#birthDay").val(employe.birthDay);
+                $("#phoneNumber").val(employe.phoneNumber);
+                $("#rg").val(employe.rg);
+                $("#cpf").val(employe.cpf);
+                $("#address").val(employe.address);
+                $("#addressNumber").val(employe.number);
+                $("#city").val(employe.city);
+                $("#state").val(employe.state);
+                $("#notes").val(employe.notes);
+                
+            }
+            
+        });
         
         function save(){
             saveNewEmploye(employe);
@@ -18,6 +45,12 @@
         function cancel(){
             window.location.replace("index.html");
         }
+        
+        function update(index){
+            updateEmploye(index, employe);
+            window.location.replace("index.html");
+        }
+        
     </script>
 </head>
 <body>
@@ -56,8 +89,8 @@
 				<textarea name="notes" id="notes" placeholder="Notes" 
                           style="width: 98.4%; min-height: 80px;" onchange="setNotes(employe, this.value)"></textarea>
 				<br> <br>
-				<button class="form-buttons" type="button" onclick="save()">Save</button>
-                <button class="form-buttons" type="reset" onclick="cancel()">Cancel</button>
+				<button class="form-buttons" type="button" id="saveButton" onclick="save()">Save</button>
+                <button class="form-buttons" type="reset" id="cancelButton" onclick="cancel()">Cancel</button>
 				</div>
 			</fieldset>
 		</form>

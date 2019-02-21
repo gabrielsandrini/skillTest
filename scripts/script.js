@@ -1,3 +1,29 @@
+/**
+*List of functions in this file:
+*   getEmployeesArray()
+*       return the array of employees saved on the localStorage
+*
+*   getNewEmployeObject()
+*       return a new employee object with all atributes empty
+*
+*   getEmploye(index)
+*        param = index of the wanted employee
+*        return a specific employe saved on the localStorage
+*
+*   saveArrayInLocalStorage(array)
+*       param = array of employees to save in the localStorage
+*       whithout return   
+*
+*   deleteEmploye(index)
+*       param = index of employees to remove in the array saved on localStorage
+*       whithout return
+*
+*   redirectToEditForm(index)
+*   getParameterFromActualUrl(parameterName)    
+*   Setters
+*
+*/
+
 function getEmployeesArray()
 {
     let employeesJson = localStorage.getItem('employees');
@@ -27,6 +53,12 @@ function getNewEmployeObject(){
     return employe;
 }
 
+function getEmploye(index)
+{
+    let employeesArray = getEmployeesArray();
+    return employeesArray[index];
+}
+
 function saveNewEmploye(employeObject){
     let array = getEmployeesArray();
     array.push(employeObject);
@@ -49,11 +81,24 @@ function deleteEmploye(index){
     }
 }
 
+function updateEmploye(index, employe){
+    let employeesArray = getEmployeesArray();
+    employeesArray[index] = employe;
+    saveArrayInLocalStorage(employeesArray);
+}
+
 function redirectToEditForm(index){
     location.href = "register.html?index="+index;    
 }
 
-
+function getParameterFromActualUrl(parameterName){
+    parameterName = parameterName + "=";
+    let urlParameters = window.location.search;
+    let indexOfSearchedParameter = urlParameters.indexOf(parameterName);
+    let indexOfTheValue = indexOfSearchedParameter + parameterName.length;
+    let parameterValue =  urlParameters.substr(indexOfTheValue).trim();
+    return parameterValue;
+}
 
 //Setters
 function setName(employe, name){
